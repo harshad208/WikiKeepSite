@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WikiKeep - Home</title>
+    <link rel="stylesheet" href="/css/index.css">
+    <style>
+        /* Styling for register and login links */
+        .register-login-links a {
+            color: #007bff;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+
+        .register-login-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to WikiKeep</h1>
+        <p>Search for articles and store them as per your personal requirements.</p>
+        <p class="register-login-links">Would you like to personalize and store articles according to your requirements? <a href="#" id="registerLink">Register</a>/ <a href="#" id="loginLink">Login</a></p>
+        <form id="searchForm">
+            <input type="text" id="searchInput" placeholder="Enter article keyword...">
+            <button type="submit">Search</button>
+        </form>
+        <div id="searchResults"></div>
+    </div>
+
+    <script src="/js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WikiKeep - Home</title>
+    <link rel="stylesheet" href="/css/user_articles.css">
+</head>
+<body>
+    <div class="container">
+        
+        <h1>WikiKeep</h1>
+        <p>Search for articles and store them as per your personal requirements.</p>
+        <form id="searchForm">
+            <input type="text" id="searchInput" placeholder="Enter article keyword...">
+            <button type="submit">Search</button>
+            <button id="tag-submit">Tag an article</button>
+        </form>
+        <form id="filterForm">
+            <select id="filterOption" name="filterOption">
+            </select>
+            <button type="" id="filterSubmit">Filter</button>
+        </form>
+        <div id="searchResults"></div>
+        <br>
+        <button type="" id="logOut">Log Out</button>
+    </div>
+
+    <!-- The modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Add Tag</h2>
+          <form id="tagForm" class="tagForm">
+              <div>
+                  <label class="tagLabel" for="tagType">Tag:</label>
+                  <select id="tagType" name="tagType" class="custom-select" onchange="checkIfCustom()">
+                  </select>
+              </div>
+              <div id="customTagInputWrapper" style="display: none;">
+                <label class="tagLabel" for="customTagInput">Custom Tag:</label>
+                <input type="text" id="customTagInput" name="customTagInput" class="custom-input">
+            </div>
+            <form id="searchForm">
+                <input type="text" id="searchInputModal" placeholder="Enter article keyword..." class="custom-input">
+                <button type="" id="modal-search">Search</button>
+            </form>
+            <div id="searchResultsModal"></div>
+            <button type="" class="custom-button" id="modal-submit">Submit</button>
+          </form>
+        </div>
+      
+      </div>
+
+    <script src="/js/user_articles.js"></script>
+</body>
+</html>
